@@ -42,7 +42,7 @@ class Product
     private $ifInStock;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $ifPreOrder;
 
@@ -52,12 +52,12 @@ class Product
     private $commande;
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="date", nullable=true)
      */
     private $disponibilityDate;
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="date", nullable=true)
      */
     private $addDate;
 
@@ -92,7 +92,7 @@ class Product
     private $onlineOnly;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $conditionProduct;
 
@@ -112,7 +112,7 @@ class Product
     private $textArea;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $deadStock;
 
@@ -122,7 +122,7 @@ class Product
     private $dematerialize;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $fileUrl;
 
@@ -132,7 +132,7 @@ class Product
     private $downloadAutorize;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $expirationDate;
 
@@ -142,7 +142,7 @@ class Product
     private $dayNumber;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $shopName;
 
@@ -157,12 +157,12 @@ class Product
     private $stockFunction;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $stockPlace;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $accessories;
 

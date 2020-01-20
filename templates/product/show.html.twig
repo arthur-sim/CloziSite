@@ -1,0 +1,142 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Product{% endblock %}
+
+{% block body %}
+    <h1>Product</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ product.id }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ product.title }}</td>
+            </tr>
+            <tr>
+                <th>MetaKeyWord</th>
+                <td>{{ product.metaKeyWord }}</td>
+            </tr>
+            <tr>
+                <th>MetaDescription</th>
+                <td>{{ product.metaDescription }}</td>
+            </tr>
+            <tr>
+                <th>NewUrl</th>
+                <td>{{ product.newUrl }}</td>
+            </tr>
+            <tr>
+                <th>IfInStock</th>
+                <td>{{ product.ifInStock }}</td>
+            </tr>
+            <tr>
+                <th>IfPreOrder</th>
+                <td>{{ product.ifPreOrder }}</td>
+            </tr>
+            <tr>
+                <th>Commande</th>
+                <td>{{ product.commande }}</td>
+            </tr>
+            <tr>
+                <th>DisponibilityDate</th>
+                <td>{{ product.disponibilityDate ? product.disponibilityDate|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>AddDate</th>
+                <td>{{ product.addDate ? product.addDate|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>DisplayPrice</th>
+                <td>{{ product.displayPrice }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td>{{ product.image }}</td>
+            </tr>
+            <tr>
+                <th>ImageTexte</th>
+                <td>{{ product.imageTexte }}</td>
+            </tr>
+            <tr>
+                <th>DeleteExistingImage</th>
+                <td>{{ product.deleteExistingImage ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>Caracteristic</th>
+                <td>{{ product.caracteristic }}</td>
+            </tr>
+            <tr>
+                <th>OnlineOnly</th>
+                <td>{{ product.onlineOnly ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>ConditionProduct</th>
+                <td>{{ product.conditionProduct }}</td>
+            </tr>
+            <tr>
+                <th>Customisable</th>
+                <td>{{ product.customisable ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>Download</th>
+                <td>{{ product.download ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>TextArea</th>
+                <td>{{ product.textArea ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>DeadStock</th>
+                <td>{{ product.deadStock }}</td>
+            </tr>
+            <tr>
+                <th>Dematerialize</th>
+                <td>{{ product.dematerialize ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>FileUrl</th>
+                <td>{{ product.fileUrl }}</td>
+            </tr>
+            <tr>
+                <th>DownloadAutorize</th>
+                <td>{{ product.downloadAutorize ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>ExpirationDate</th>
+                <td>{{ product.expirationDate }}</td>
+            </tr>
+            <tr>
+                <th>DayNumber</th>
+                <td>{{ product.dayNumber ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>ShopName</th>
+                <td>{{ product.shopName }}</td>
+            </tr>
+            <tr>
+                <th>AvancedStock</th>
+                <td>{{ product.avancedStock ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>StockFunction</th>
+                <td>{{ product.stockFunction ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>StockPlace</th>
+                <td>{{ product.stockPlace }}</td>
+            </tr>
+            <tr>
+                <th>Accessories</th>
+                <td>{{ product.accessories }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('product_index') }}">back to list</a>
+
+    <a href="{{ path('product_edit', {'id': product.id}) }}">edit</a>
+
+    {{ include('product/_delete_form.html.twig') }}
+{% endblock %}
