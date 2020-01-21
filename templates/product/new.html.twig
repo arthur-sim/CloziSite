@@ -3,9 +3,201 @@
 {% block title %}New Product{% endblock %}
 
 {% block body %}
-    <h1>Create new Product</h1>
+    <div class="container">
+        {#<h2>Un trick manquant ?</h2>
+        <h1>Ajoutez le !</h1>#}
 
-    {{ include('product/_form.html.twig') }}
+        {{ form_start(form) }}
+        <div class="fields">
+            <h3>Titre</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.title) }}
+                {{ form_errors(form.title) }}
+            </span>
+            <br/>
+            <h3>Catégorie</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.categorie) }}
+                {{ form_errors(form.categorie) }}
+            </span>
+            <br/>
+            <h3>Prix</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.price) }}
+                {{ form_errors(form.price) }}
+            </span>
+            <br/>
+            <h3>Prix d'achat</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.shoppedPrice) }}
+                {{ form_errors(form.shoppedPrice) }}
+            </span>
+            <br/>
+            <h3>Promo</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.discount) }}
+                {{ form_errors(form.discount) }}
+            </span>
+            <br/>
+            <h3>Montant de la promo</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.discountPrice) }}
+                {{ form_errors(form.discountPrice) }}
+            </span>
+            <br/>
+            <h3>pourcentage de la promo</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.discountPercent) }}
+                {{ form_errors(form.discountPercent) }}
+            </span>
+            <br/>
+            <h3>Promo de</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.dicsountFor) }}
+                {{ form_errors(form.dicsountFor) }}
+            </span>
+            <br/>
+            <h3>Promo à</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.dicsountTo) }}
+                {{ form_errors(form.dicsountTo) }}
+            </span>
+            <br/>
+            <h3>Référence</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.reference) }}
+                {{ form_errors(form.reference) }}
+            </span>
+            <br/>
+            <h3>marque</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.brand) }}
+                {{ form_errors(form.brand) }}
+            </span>
+            <br/>
+            <h3>largeur</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.width) }}
+                {{ form_errors(form.width) }}
+            </span>
+            <br/>
+            <h3>Longeur</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.height) }}
+                {{ form_errors(form.height) }}
+            </span>
+            <br/>
+            <h3>Profondeur</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.depth) }}
+                {{ form_errors(form.depth) }}
+            </span>
+            <br/>
+            <h3>Poids</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.weight) }}
+                {{ form_errors(form.weight) }}
+            </span>
+            <br/>
+            <h3>Délais de livraison</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.deliveryProduct) }}
+                {{ form_errors(form.deliveryProduct) }}
+            </span>
+            <br/>
+            <h3>Récapitulatif</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.summary) }}
+                {{ form_errors(form.summary) }}
+            </span>
+            <br/>
+            <h3>Déscription</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.description) }}
+                {{ form_errors(form.description) }}
+            </span>
+            <br/>
+            <h3>Mots clés</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.keyWord) }}
+                {{ form_errors(form.keyWord) }}
+            </span>
+            <br/>
+            <h3>Tag titre</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.tagTitle) }}
+                {{ form_errors(form.tagTitle) }}
+            </span>
+            <br/>
+            <h3>Meta mots clés</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.metaKeyWord) }}
+                {{ form_errors(form.metaKeyWord) }}
+            </span>
+            <br/>
+            <h3>Meta déscription</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.metaDescription) }}
+                {{ form_errors(form.metaDescription) }}
+            </span>
+            <br/>
+            <h3>Nouvelle URL</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.newUrl) }}
+                {{ form_errors(form.newUrl) }}
+            </span>
+            <br/>
+            <h3>Image</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.image) }}
+                {{ form_errors(form.image) }}
+            </span>
+            <br/>
+            <h3>Texte image</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.imageTexte) }}
+                {{ form_errors(form.imageTexte) }}
+            </span>
+            <br/>
+            <h3>Caractéristique</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.caracteristic) }}
+                {{ form_errors(form.caracteristic) }}
+            </span>
+            <br/>
+        </div>
+        <div class="submit">
+            <button type="submit" value="Submit">Submit</button>
+            <br/><br/><br/><br/>
+        </div>    
+        {{ form_end(form) }}
+    </div>
 
     <a href="{{ path('product_index') }}">back to list</a>
 {% endblock %}

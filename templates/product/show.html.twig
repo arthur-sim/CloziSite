@@ -12,8 +12,148 @@
                 <td>{{ product.id }}</td>
             </tr>
             <tr>
+                <th>Actif</th>
+                <td>{{ product.actif }}</td>
+            </tr>
+            <tr>
                 <th>Title</th>
                 <td>{{ product.title }}</td>
+            </tr>
+            <tr>
+                <th>Categorie</th>
+                <td>{{ product.categorie }}</td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td>{{ product.price }}</td>
+            </tr>
+            <tr>
+                <th>TaxRules</th>
+                <td>{{ product.taxRules }}</td>
+            </tr>
+            <tr>
+                <th>ShoppedPrice</th>
+                <td>{{ product.shoppedPrice }}</td>
+            </tr>
+            <tr>
+                <th>Discount</th>
+                <td>{{ product.discount }}</td>
+            </tr>
+            <tr>
+                <th>DiscountPrice</th>
+                <td>{{ product.discountPrice }}</td>
+            </tr>
+            <tr>
+                <th>DiscountPercent</th>
+                <td>{{ product.discountPercent }}</td>
+            </tr>
+            <tr>
+                <th>DicsountFor</th>
+                <td>{{ product.dicsountFor ? product.dicsountFor|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>DicsountTo</th>
+                <td>{{ product.dicsountTo ? product.dicsountTo|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Reference</th>
+                <td>{{ product.reference }}</td>
+            </tr>
+            <tr>
+                <th>ReferenceShopper</th>
+                <td>{{ product.referenceShopper }}</td>
+            </tr>
+            <tr>
+                <th>Shopper</th>
+                <td>{{ product.shopper }}</td>
+            </tr>
+            <tr>
+                <th>Brand</th>
+                <td>{{ product.brand }}</td>
+            </tr>
+            <tr>
+                <th>Ean13</th>
+                <td>{{ product.ean13 }}</td>
+            </tr>
+            <tr>
+                <th>Upc</th>
+                <td>{{ product.upc }}</td>
+            </tr>
+            <tr>
+                <th>EcoPart</th>
+                <td>{{ product.ecoPart }}</td>
+            </tr>
+            <tr>
+                <th>Width</th>
+                <td>{{ product.width }}</td>
+            </tr>
+            <tr>
+                <th>Height</th>
+                <td>{{ product.height }}</td>
+            </tr>
+            <tr>
+                <th>Depth</th>
+                <td>{{ product.depth }}</td>
+            </tr>
+            <tr>
+                <th>Weight</th>
+                <td>{{ product.weight }}</td>
+            </tr>
+            <tr>
+                <th>DeliveryProduct</th>
+                <td>{{ product.deliveryProduct }}</td>
+            </tr>
+            <tr>
+                <th>DeliveryproductSoldOut</th>
+                <td>{{ product.deliveryproductSoldOut }}</td>
+            </tr>
+            <tr>
+                <th>Quantity</th>
+                <td>{{ product.quantity }}</td>
+            </tr>
+            <tr>
+                <th>MinimalQuantity</th>
+                <td>{{ product.minimalQuantity }}</td>
+            </tr>
+            <tr>
+                <th>LevelMinimalStock</th>
+                <td>{{ product.levelMinimalStock }}</td>
+            </tr>
+            <tr>
+                <th>LevelMinimalStockForMail</th>
+                <td>{{ product.levelMinimalStockForMail }}</td>
+            </tr>
+            <tr>
+                <th>Visibility</th>
+                <td>{{ product.visibility }}</td>
+            </tr>
+            <tr>
+                <th>ShippingPrice</th>
+                <td>{{ product.shippingPrice }}</td>
+            </tr>
+            <tr>
+                <th>Unity</th>
+                <td>{{ product.unity }}</td>
+            </tr>
+            <tr>
+                <th>UnityPrice</th>
+                <td>{{ product.unityPrice }}</td>
+            </tr>
+            <tr>
+                <th>Summary</th>
+                <td>{{ product.summary }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ product.description }}</td>
+            </tr>
+            <tr>
+                <th>KeyWord</th>
+                <td>{{ product.keyWord }}</td>
+            </tr>
+            <tr>
+                <th>TagTitle</th>
+                <td>{{ product.tagTitle }}</td>
             </tr>
             <tr>
                 <th>MetaKeyWord</th>
@@ -41,11 +181,11 @@
             </tr>
             <tr>
                 <th>DisponibilityDate</th>
-                <td>{{ product.disponibilityDate ? product.disponibilityDate|date('Y-m-d') : '' }}</td>
+                <td>{{ product.disponibilityDate }}</td>
             </tr>
             <tr>
                 <th>AddDate</th>
-                <td>{{ product.addDate ? product.addDate|date('Y-m-d') : '' }}</td>
+                <td>{{ product.addDate }}</td>
             </tr>
             <tr>
                 <th>DisplayPrice</th>
@@ -61,7 +201,7 @@
             </tr>
             <tr>
                 <th>DeleteExistingImage</th>
-                <td>{{ product.deleteExistingImage ? 'Yes' : 'No' }}</td>
+                <td>{{ product.deleteExistingImage }}</td>
             </tr>
             <tr>
                 <th>Caracteristic</th>
@@ -69,7 +209,7 @@
             </tr>
             <tr>
                 <th>OnlineOnly</th>
-                <td>{{ product.onlineOnly ? 'Yes' : 'No' }}</td>
+                <td>{{ product.onlineOnly }}</td>
             </tr>
             <tr>
                 <th>ConditionProduct</th>
@@ -77,15 +217,15 @@
             </tr>
             <tr>
                 <th>Customisable</th>
-                <td>{{ product.customisable ? 'Yes' : 'No' }}</td>
+                <td>{{ product.customisable }}</td>
             </tr>
             <tr>
                 <th>Download</th>
-                <td>{{ product.download ? 'Yes' : 'No' }}</td>
+                <td>{{ product.download }}</td>
             </tr>
             <tr>
                 <th>TextArea</th>
-                <td>{{ product.textArea ? 'Yes' : 'No' }}</td>
+                <td>{{ product.textArea }}</td>
             </tr>
             <tr>
                 <th>DeadStock</th>
@@ -93,7 +233,7 @@
             </tr>
             <tr>
                 <th>Dematerialize</th>
-                <td>{{ product.dematerialize ? 'Yes' : 'No' }}</td>
+                <td>{{ product.dematerialize }}</td>
             </tr>
             <tr>
                 <th>FileUrl</th>
@@ -101,7 +241,7 @@
             </tr>
             <tr>
                 <th>DownloadAutorize</th>
-                <td>{{ product.downloadAutorize ? 'Yes' : 'No' }}</td>
+                <td>{{ product.downloadAutorize }}</td>
             </tr>
             <tr>
                 <th>ExpirationDate</th>
@@ -109,7 +249,7 @@
             </tr>
             <tr>
                 <th>DayNumber</th>
-                <td>{{ product.dayNumber ? 'Yes' : 'No' }}</td>
+                <td>{{ product.dayNumber }}</td>
             </tr>
             <tr>
                 <th>ShopName</th>
@@ -117,11 +257,11 @@
             </tr>
             <tr>
                 <th>AvancedStock</th>
-                <td>{{ product.avancedStock ? 'Yes' : 'No' }}</td>
+                <td>{{ product.avancedStock }}</td>
             </tr>
             <tr>
                 <th>StockFunction</th>
-                <td>{{ product.stockFunction ? 'Yes' : 'No' }}</td>
+                <td>{{ product.stockFunction }}</td>
             </tr>
             <tr>
                 <th>StockPlace</th>

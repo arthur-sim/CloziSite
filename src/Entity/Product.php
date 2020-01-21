@@ -17,10 +17,184 @@ class Product
     private $id;
 
     /**
+     * @ORM\Column(type="integer")
+    */
+    private $actif;
+    
+    /**
      * @ORM\Column(type="string", length=255)
      */
     private $title;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $categorie;
+    
+    /**
+     * @ORM\Column(type="decimal", precision=10, scale=0)
+     */
+    private $price;
+    
+    /**
+     * @ORM\Column(type="integer")
+    */
+    private $taxRules;
+    
+    /**
+     * @ORM\Column(type="decimal", precision=10, scale=0)
+     */
+    private $shoppedPrice;
+    
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $discount;
+    
+    /**
+     * @ORM\Column(type="decimal", precision=10, scale=0)
+     */
+    private $discountPrice;
+    
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $discountPercent;
+    
+    /**
+     * @ORM\Column(type="date")
+     */
+    private $dicsountFor;
+    
+    /**
+     * @ORM\Column(type="date")
+     */
+    private $dicsountTo;
+    
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $reference;
+    
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $referenceShopper;
+    
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $shopper;
+    
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $brand;
+    
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $ean13;
+    
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $upc;
+    
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $ecoPart;
+    
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $width;
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $height;
+    
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $depth;
+    
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $weight;
+    
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $deliveryProduct;
+    
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $deliveryproductSoldOut;
+    
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $quantity;
+    
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $minimalQuantity;
+    
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $levelMinimalStock;
+    
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $levelMinimalStockForMail;
+    
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $visibility;
+    
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $shippingPrice;
+    
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $unity;
+    
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $unityPrice;
+    
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $summary;
+    
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $description;
+    
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $keyWord;
+    
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $tagTitle;
+    
     /**
      * @ORM\Column(type="string", length=255)
      */
@@ -52,12 +226,12 @@ class Product
     private $commande;
 
     /**
-     * @ORM\Column(type="date", nullable=true)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $disponibilityDate;
 
     /**
-     * @ORM\Column(type="date", nullable=true)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $addDate;
 
@@ -77,7 +251,7 @@ class Product
     private $imageTexte;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="integer")
      */
     private $deleteExistingImage;
 
@@ -87,7 +261,7 @@ class Product
     private $caracteristic;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="integer")
      */
     private $onlineOnly;
 
@@ -97,17 +271,17 @@ class Product
     private $conditionProduct;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="integer")
      */
     private $customisable;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="integer")
      */
     private $download;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="integer")
      */
     private $textArea;
 
@@ -117,7 +291,7 @@ class Product
     private $deadStock;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="integer")
      */
     private $dematerialize;
 
@@ -127,7 +301,7 @@ class Product
     private $fileUrl;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="integer")
      */
     private $downloadAutorize;
 
@@ -137,7 +311,7 @@ class Product
     private $expirationDate;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="integer")
      */
     private $dayNumber;
 
@@ -147,12 +321,12 @@ class Product
     private $shopName;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="integer")
      */
     private $avancedStock;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="integer")
      */
     private $stockFunction;
 
@@ -169,6 +343,18 @@ class Product
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    function getActif(): ?int
+    {
+        return $this->actif;
+    }
+    
+    function setActif(int $actif): self 
+    {
+        $this->actif = $actif;
+        
+        return $this;
     }
 
     public function getTitle(): ?string
@@ -527,6 +713,414 @@ class Product
     public function setAccessories(string $accessories): self
     {
         $this->accessories = $accessories;
+
+        return $this;
+    }
+
+    public function getCategorie(): ?string
+    {
+        return $this->categorie;
+    }
+
+    public function setCategorie(string $categorie): self
+    {
+        $this->categorie = $categorie;
+
+        return $this;
+    }
+
+    public function getPrice(): ?string
+    {
+        return $this->price;
+    }
+
+    public function setPrice(string $price): self
+    {
+        $this->price = $price;
+
+        return $this;
+    }
+
+    public function getTaxRules(): ?int
+    {
+        return $this->taxRules;
+    }
+
+    public function setTaxRules(int $taxRules): self
+    {
+        $this->taxRules = $taxRules;
+
+        return $this;
+    }
+
+    public function getShoppedPrice(): ?string
+    {
+        return $this->shoppedPrice;
+    }
+
+    public function setShoppedPrice(string $shoppedPrice): self
+    {
+        $this->shoppedPrice = $shoppedPrice;
+
+        return $this;
+    }
+
+    public function getDiscount(): ?int
+    {
+        return $this->discount;
+    }
+
+    public function setDiscount(int $discount): self
+    {
+        $this->discount = $discount;
+
+        return $this;
+    }
+
+    public function getDiscountPrice(): ?string
+    {
+        return $this->discountPrice;
+    }
+
+    public function setDiscountPrice(string $discountPrice): self
+    {
+        $this->discountPrice = $discountPrice;
+
+        return $this;
+    }
+
+    public function getDiscountPercent(): ?int
+    {
+        return $this->discountPercent;
+    }
+
+    public function setDiscountPercent(int $discountPercent): self
+    {
+        $this->discountPercent = $discountPercent;
+
+        return $this;
+    }
+
+    public function getDicsountFor(): ?\DateTimeInterface
+    {
+        return $this->dicsountFor;
+    }
+
+    public function setDicsountFor(\DateTimeInterface $dicsountFor): self
+    {
+        $this->dicsountFor = $dicsountFor;
+
+        return $this;
+    }
+
+    public function getDicsountTo(): ?\DateTimeInterface
+    {
+        return $this->dicsountTo;
+    }
+
+    public function setDicsountTo(\DateTimeInterface $dicsountTo): self
+    {
+        $this->dicsountTo = $dicsountTo;
+
+        return $this;
+    }
+
+    public function getReference(): ?string
+    {
+        return $this->reference;
+    }
+
+    public function setReference(string $reference): self
+    {
+        $this->reference = $reference;
+
+        return $this;
+    }
+
+    public function getReferenceShopper(): ?string
+    {
+        return $this->referenceShopper;
+    }
+
+    public function setReferenceShopper(string $referenceShopper): self
+    {
+        $this->referenceShopper = $referenceShopper;
+
+        return $this;
+    }
+
+    public function getShopper(): ?string
+    {
+        return $this->shopper;
+    }
+
+    public function setShopper(string $shopper): self
+    {
+        $this->shopper = $shopper;
+
+        return $this;
+    }
+
+    public function getBrand(): ?string
+    {
+        return $this->brand;
+    }
+
+    public function setBrand(string $brand): self
+    {
+        $this->brand = $brand;
+
+        return $this;
+    }
+
+    public function getEan13(): ?string
+    {
+        return $this->ean13;
+    }
+
+    public function setEan13(string $ean13): self
+    {
+        $this->ean13 = $ean13;
+
+        return $this;
+    }
+
+    public function getUpc(): ?string
+    {
+        return $this->upc;
+    }
+
+    public function setUpc(string $upc): self
+    {
+        $this->upc = $upc;
+
+        return $this;
+    }
+
+    public function getEcoPart(): ?int
+    {
+        return $this->ecoPart;
+    }
+
+    public function setEcoPart(int $ecoPart): self
+    {
+        $this->ecoPart = $ecoPart;
+
+        return $this;
+    }
+
+    public function getWidth(): ?string
+    {
+        return $this->width;
+    }
+
+    public function setWidth(string $width): self
+    {
+        $this->width = $width;
+
+        return $this;
+    }
+
+    public function getHeight(): ?string
+    {
+        return $this->height;
+    }
+
+    public function setHeight(string $height): self
+    {
+        $this->height = $height;
+
+        return $this;
+    }
+
+    public function getDepth(): ?string
+    {
+        return $this->depth;
+    }
+
+    public function setDepth(string $depth): self
+    {
+        $this->depth = $depth;
+
+        return $this;
+    }
+
+    public function getWeight(): ?string
+    {
+        return $this->weight;
+    }
+
+    public function setWeight(string $weight): self
+    {
+        $this->weight = $weight;
+
+        return $this;
+    }
+
+    public function getDeliveryProduct(): ?string
+    {
+        return $this->deliveryProduct;
+    }
+
+    public function setDeliveryProduct(string $deliveryProduct): self
+    {
+        $this->deliveryProduct = $deliveryProduct;
+
+        return $this;
+    }
+
+    public function getDeliveryproductSoldOut(): ?string
+    {
+        return $this->deliveryproductSoldOut;
+    }
+
+    public function setDeliveryproductSoldOut(string $deliveryproductSoldOut): self
+    {
+        $this->deliveryproductSoldOut = $deliveryproductSoldOut;
+
+        return $this;
+    }
+
+    public function getQuantity(): ?int
+    {
+        return $this->quantity;
+    }
+
+    public function setQuantity(int $quantity): self
+    {
+        $this->quantity = $quantity;
+
+        return $this;
+    }
+
+    public function getMinimalQuantity(): ?int
+    {
+        return $this->minimalQuantity;
+    }
+
+    public function setMinimalQuantity(int $minimalQuantity): self
+    {
+        $this->minimalQuantity = $minimalQuantity;
+
+        return $this;
+    }
+
+    public function getLevelMinimalStock(): ?int
+    {
+        return $this->levelMinimalStock;
+    }
+
+    public function setLevelMinimalStock(int $levelMinimalStock): self
+    {
+        $this->levelMinimalStock = $levelMinimalStock;
+
+        return $this;
+    }
+
+    public function getLevelMinimalStockForMail(): ?int
+    {
+        return $this->levelMinimalStockForMail;
+    }
+
+    public function setLevelMinimalStockForMail(int $levelMinimalStockForMail): self
+    {
+        $this->levelMinimalStockForMail = $levelMinimalStockForMail;
+
+        return $this;
+    }
+
+    public function getVisibility(): ?string
+    {
+        return $this->visibility;
+    }
+
+    public function setVisibility(string $visibility): self
+    {
+        $this->visibility = $visibility;
+
+        return $this;
+    }
+
+    public function getShippingPrice(): ?string
+    {
+        return $this->shippingPrice;
+    }
+
+    public function setShippingPrice(string $shippingPrice): self
+    {
+        $this->shippingPrice = $shippingPrice;
+
+        return $this;
+    }
+
+    public function getUnity(): ?string
+    {
+        return $this->unity;
+    }
+
+    public function setUnity(string $unity): self
+    {
+        $this->unity = $unity;
+
+        return $this;
+    }
+
+    public function getUnityPrice(): ?string
+    {
+        return $this->unityPrice;
+    }
+
+    public function setUnityPrice(string $unityPrice): self
+    {
+        $this->unityPrice = $unityPrice;
+
+        return $this;
+    }
+
+    public function getSummary(): ?string
+    {
+        return $this->summary;
+    }
+
+    public function setSummary(string $summary): self
+    {
+        $this->summary = $summary;
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(string $description): self
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    public function getKeyWord(): ?string
+    {
+        return $this->keyWord;
+    }
+
+    public function setKeyWord(string $keyWord): self
+    {
+        $this->keyWord = $keyWord;
+
+        return $this;
+    }
+
+    public function getTagTitle(): ?string
+    {
+        return $this->tagTitle;
+    }
+
+    public function setTagTitle(string $tagTitle): self
+    {
+        $this->tagTitle = $tagTitle;
 
         return $this;
     }

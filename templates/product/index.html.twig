@@ -9,7 +9,42 @@
         <thead>
             <tr>
                 <th>Id</th>
+                <th>Actif</th>
                 <th>Title</th>
+                <th>Categorie</th>
+                <th>Price</th>
+                <th>TaxRules</th>
+                <th>ShoppedPrice</th>
+                <th>Discount</th>
+                <th>DiscountPrice</th>
+                <th>DiscountPercent</th>
+                <th>DicsountFor</th>
+                <th>DicsountTo</th>
+                <th>Reference</th>
+                <th>ReferenceShopper</th>
+                <th>Shopper</th>
+                <th>Brand</th>
+                <th>Ean13</th>
+                <th>Upc</th>
+                <th>EcoPart</th>
+                <th>Width</th>
+                <th>Height</th>
+                <th>Depth</th>
+                <th>Weight</th>
+                <th>DeliveryProduct</th>
+                <th>DeliveryproductSoldOut</th>
+                <th>Quantity</th>
+                <th>MinimalQuantity</th>
+                <th>LevelMinimalStock</th>
+                <th>LevelMinimalStockForMail</th>
+                <th>Visibility</th>
+                <th>ShippingPrice</th>
+                <th>Unity</th>
+                <th>UnityPrice</th>
+                <th>Summary</th>
+                <th>Description</th>
+                <th>KeyWord</th>
+                <th>TagTitle</th>
                 <th>MetaKeyWord</th>
                 <th>MetaDescription</th>
                 <th>NewUrl</th>
@@ -46,34 +81,69 @@
         {% for product in products %}
             <tr>
                 <td>{{ product.id }}</td>
+                <td>{{ product.actif }}</td>
                 <td>{{ product.title }}</td>
+                <td>{{ product.categorie }}</td>
+                <td>{{ product.price }}</td>
+                <td>{{ product.taxRules }}</td>
+                <td>{{ product.shoppedPrice }}</td>
+                <td>{{ product.discount }}</td>
+                <td>{{ product.discountPrice }}</td>
+                <td>{{ product.discountPercent }}</td>
+                <td>{{ product.dicsountFor ? product.dicsountFor|date('Y-m-d') : '' }}</td>
+                <td>{{ product.dicsountTo ? product.dicsountTo|date('Y-m-d') : '' }}</td>
+                <td>{{ product.reference }}</td>
+                <td>{{ product.referenceShopper }}</td>
+                <td>{{ product.shopper }}</td>
+                <td>{{ product.brand }}</td>
+                <td>{{ product.ean13 }}</td>
+                <td>{{ product.upc }}</td>
+                <td>{{ product.ecoPart }}</td>
+                <td>{{ product.width }}</td>
+                <td>{{ product.height }}</td>
+                <td>{{ product.depth }}</td>
+                <td>{{ product.weight }}</td>
+                <td>{{ product.deliveryProduct }}</td>
+                <td>{{ product.deliveryproductSoldOut }}</td>
+                <td>{{ product.quantity }}</td>
+                <td>{{ product.minimalQuantity }}</td>
+                <td>{{ product.levelMinimalStock }}</td>
+                <td>{{ product.levelMinimalStockForMail }}</td>
+                <td>{{ product.visibility }}</td>
+                <td>{{ product.shippingPrice }}</td>
+                <td>{{ product.unity }}</td>
+                <td>{{ product.unityPrice }}</td>
+                <td>{{ product.summary }}</td>
+                <td>{{ product.description }}</td>
+                <td>{{ product.keyWord }}</td>
+                <td>{{ product.tagTitle }}</td>
                 <td>{{ product.metaKeyWord }}</td>
                 <td>{{ product.metaDescription }}</td>
                 <td>{{ product.newUrl }}</td>
                 <td>{{ product.ifInStock }}</td>
                 <td>{{ product.ifPreOrder }}</td>
                 <td>{{ product.commande }}</td>
-                <td>{{ product.disponibilityDate ? product.disponibilityDate|date('Y-m-d') : '' }}</td>
-                <td>{{ product.addDate ? product.addDate|date('Y-m-d') : '' }}</td>
+                <td>{{ product.disponibilityDate }}</td>
+                <td>{{ product.addDate }}</td>
                 <td>{{ product.displayPrice }}</td>
                 <td>{{ product.image }}</td>
                 <td>{{ product.imageTexte }}</td>
-                <td>{{ product.deleteExistingImage ? 'Yes' : 'No' }}</td>
+                <td>{{ product.deleteExistingImage }}</td>
                 <td>{{ product.caracteristic }}</td>
-                <td>{{ product.onlineOnly ? 'Yes' : 'No' }}</td>
+                <td>{{ product.onlineOnly }}</td>
                 <td>{{ product.conditionProduct }}</td>
-                <td>{{ product.customisable ? 'Yes' : 'No' }}</td>
-                <td>{{ product.download ? 'Yes' : 'No' }}</td>
-                <td>{{ product.textArea ? 'Yes' : 'No' }}</td>
+                <td>{{ product.customisable }}</td>
+                <td>{{ product.download }}</td>
+                <td>{{ product.textArea }}</td>
                 <td>{{ product.deadStock }}</td>
-                <td>{{ product.dematerialize ? 'Yes' : 'No' }}</td>
+                <td>{{ product.dematerialize }}</td>
                 <td>{{ product.fileUrl }}</td>
-                <td>{{ product.downloadAutorize ? 'Yes' : 'No' }}</td>
+                <td>{{ product.downloadAutorize }}</td>
                 <td>{{ product.expirationDate }}</td>
-                <td>{{ product.dayNumber ? 'Yes' : 'No' }}</td>
+                <td>{{ product.dayNumber }}</td>
                 <td>{{ product.shopName }}</td>
-                <td>{{ product.avancedStock ? 'Yes' : 'No' }}</td>
-                <td>{{ product.stockFunction ? 'Yes' : 'No' }}</td>
+                <td>{{ product.avancedStock }}</td>
+                <td>{{ product.stockFunction }}</td>
                 <td>{{ product.stockPlace }}</td>
                 <td>{{ product.accessories }}</td>
                 <td>
@@ -83,7 +153,7 @@
             </tr>
         {% else %}
             <tr>
-                <td colspan="32">no records found</td>
+                <td colspan="67">no records found</td>
             </tr>
         {% endfor %}
         </tbody>
