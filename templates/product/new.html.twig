@@ -121,6 +121,13 @@
                 {{ form_errors(form.deliveryProduct) }}
             </span>
             <br/>
+            <h3>Prix de la livraison</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.shippingPrice) }}
+                {{ form_errors(form.shippingPrice) }}
+            </span>
+            <br/>
             <h3>Récapitulatif</h3>
             <br/>
             <span>
@@ -189,6 +196,275 @@
             <span>
                 {{ form_widget(form.caracteristic) }}
                 {{ form_errors(form.caracteristic) }}
+            </span>
+            <br/>
+        </div>
+            
+        <div style="display:none;">
+            <h3>Actif</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.actif) }}
+                {{ form_errors(form.actif) }}
+            </span>
+            <br/>
+            <h3>taxRules</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.taxRules) }}
+                {{ form_errors(form.taxRules) }}
+            </span>
+            <br/>
+            <h3>referenceShopper</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.referenceShopper) }}
+                {{ form_errors(form.referenceShopper) }}
+            </span>
+            <br/>
+            <h3>shopper</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.shopper) }}
+                {{ form_errors(form.shopper) }}
+            </span>
+            <br/>
+            <h3>ean13</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.ean13) }}
+                {{ form_errors(form.ean13) }}
+            </span>
+            <br/>
+            <h3>upc</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.upc) }}
+                {{ form_errors(form.upc) }}
+            </span>
+            <br/>
+            <h3>ecoPart</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.ecoPart) }}
+                {{ form_errors(form.ecoPart) }}
+            </span>
+            <br/>
+            <h3>deliveryproductSoldOut</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.deliveryproductSoldOut) }}
+                {{ form_errors(form.deliveryproductSoldOut) }}
+            </span>
+            <br/>
+            <h3>quantity</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.quantity) }}
+                {{ form_errors(form.quantity) }}
+            </span>
+            <br/>
+            <h3>minimalQuantity</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.minimalQuantity) }}
+                {{ form_errors(form.minimalQuantity) }}
+            </span>
+            <br/>
+            <h3>levelMinimalStock</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.levelMinimalStock) }}
+                {{ form_errors(form.levelMinimalStock) }}
+            </span>
+            <br/>
+            <h3>levelMinimalStockForMail</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.levelMinimalStockForMail) }}
+                {{ form_errors(form.levelMinimalStockForMail) }}
+            </span>
+            <br/>
+            <h3>visibility</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.visibility) }}
+                {{ form_errors(form.visibility) }}
+            </span>
+            <br/>
+            <h3>unity</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.unity) }}
+                {{ form_errors(form.unity) }}
+            </span>
+            <br/>
+            <h3>unityPrice</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.unityPrice) }}
+                {{ form_errors(form.unityPrice) }}
+            </span>
+            <br/>
+            <h3>ifInStock</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.ifInStock) }}
+                {{ form_errors(form.ifInStock) }}
+            </span>
+            <br/>
+            <h3>ifPreOrder</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.ifPreOrder) }}
+                {{ form_errors(form.ifPreOrder) }}
+            </span>
+            <br/>
+            <h3>commande</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.commande) }}
+                {{ form_errors(form.commande) }}
+            </span>
+            <br/>
+            <h3>disponibilityDate</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.disponibilityDate) }}
+                {{ form_errors(form.disponibilityDate) }}
+            </span>
+            <br/>
+            <h3>addDate</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.addDate) }}
+                {{ form_errors(form.addDate) }}
+            </span>
+            <br/>
+            <h3>displayPrice</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.displayPrice) }}
+                {{ form_errors(form.displayPrice) }}
+            </span>
+            <br/>
+            <h3>deleteExistingImage</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.deleteExistingImage) }}
+                {{ form_errors(form.deleteExistingImage) }}
+            </span>
+            <br/>
+            <h3>onlineOnly</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.onlineOnly) }}
+                {{ form_errors(form.onlineOnly) }}
+            </span>
+            <br/>
+            <h3>conditionProduct</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.conditionProduct) }}
+                {{ form_errors(form.conditionProduct) }}
+            </span>
+            <br/>
+            <h3>customisable</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.customisable) }}
+                {{ form_errors(form.customisable) }}
+            </span>
+            <br/>
+            <h3>download</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.download) }}
+                {{ form_errors(form.download) }}
+            </span>
+            <br/>
+            <h3>textArea</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.textArea) }}
+                {{ form_errors(form.textArea) }}
+            </span>
+            <br/>
+            <h3>deadStock</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.deadStock) }}
+                {{ form_errors(form.deadStock) }}
+            </span>
+            <br/>
+            <h3>dematerialize</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.dematerialize) }}
+                {{ form_errors(form.dematerialize) }}
+            </span>
+            <br/>
+            <h3>fileUrl</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.fileUrl) }}
+                {{ form_errors(form.fileUrl) }}
+            </span>
+            <br/>
+            <h3>downloadAutorize</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.downloadAutorize) }}
+                {{ form_errors(form.downloadAutorize) }}
+            </span>
+            <br/>
+            <h3>expirationDate</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.expirationDate) }}
+                {{ form_errors(form.expirationDate) }}
+            </span>
+            <br/>
+            <h3>dayNumber</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.dayNumber) }}
+                {{ form_errors(form.dayNumber) }}
+            </span>
+            <br/>
+            <h3>shopName</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.shopName) }}
+                {{ form_errors(form.shopName) }}
+            </span>
+            <br/>
+            <h3>avancedStock</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.avancedStock) }}
+                {{ form_errors(form.avancedStock) }}
+            </span>
+            <br/>
+            <h3>stockFunction</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.stockFunction) }}
+                {{ form_errors(form.stockFunction) }}
+            </span>
+            <br/>
+            <h3>stockPlace</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.stockPlace) }}
+                {{ form_errors(form.stockPlace) }}
+            </span>
+            <br/>
+            <h3>accessories</h3>
+            <br/>
+            <span>
+                {{ form_widget(form.accessories) }}
+                {{ form_errors(form.accessories) }}
             </span>
             <br/>
         </div>
